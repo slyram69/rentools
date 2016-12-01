@@ -37,7 +37,7 @@ router.get('/machine', function(req, res, next) {
 });
 
 /* GET New User page. */
-router.get('/newuser', function(req, res) {
+router.get('/signup', function(req, res) {
     res.render('signup', { title: 'New User signup' });
 });
 
