@@ -4,11 +4,29 @@ var User = require('../models/user');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Tools' });
 });
-router.get('/helloworld', function(req,res){
-  res.render('helloworld', {title: 'Hello, World!'});
+/* GET powertools page. */
+router.get('/power', function(req, res, next) {
+  // Item.find({'category': 'power'},function(err, products){
+  //      console.log(products);
+  res.render('power', { title: 'Power Tools' });
 });
+
+/* GET penumatictools page. */
+router.get('/pneumatic', function(req, res, next) {
+  // Item.find({'category': 'penumatic'},function(err, products){
+  //      console.log(products);
+  res.render('pneumatic', { title: 'Pneumatic Tools' });
+});
+
+/* GET machinetools page. */
+router.get('/machine', function(req, res, next) {
+  // Item.find({'category': 'machine'},function(err, products){
+  //      console.log(products);
+  res.render('machine', { title: 'Machine Tools' });
+});
+
 /* GET New User page. */
 router.get('/signup', function(req, res) {
     res.render('signup', { title: 'New User signup' });
