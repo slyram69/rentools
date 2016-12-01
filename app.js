@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+
 //Authentication
 var passport = require('passport');
 var Auth0Strategy = require('passport-auth0');
@@ -24,6 +25,10 @@ var strategy = new Auth0Strategy({
     return done(null, profile);
   });
 //Select database form mongo
+
+var multer = require('multer');
+
+
 mongoose.connect('mongodb://localhost/rentools');
 //initialize express
 var app = express();
@@ -33,12 +38,15 @@ app.use(passport.session());
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var newitem = require('./routes/newitem');
 
 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+app.use(multer({dest: 'public/images/uploads'}).single('image'));
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -50,6 +58,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/newitem', newitem);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
