@@ -29,7 +29,7 @@ var strategy = new Auth0Strategy({
 var multer = require('multer');
 
 
-mongoose.connect('mongodb://localhost/rentools');
+mongoose.connect(process.env.RENTOOLS_URI);
 //initialize express
 var app = express();
 //initialize passport
