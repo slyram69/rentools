@@ -92,3 +92,28 @@ margin-top: 8px;
 .dropdown-menu {
     min-width: 200px;
 }
+
+.thumnbail-image {
+  height: 400px;
+  width: 200px;
+  border-color: blue;
+}
+
+/*.thumbnail {
+  height: 400px;
+  width: 200px;
+}*/
+/*
+.container .row img  {
+  height: 300px !important;
+  width: 200px !important;
+  border-radius: 50% !important;
+}
+
+.test {
+  color: red;
+}
+.test2 {
+  color: red;
+  text-align: center;*/
+}
