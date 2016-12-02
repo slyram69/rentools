@@ -41,7 +41,13 @@ router.get('/signup', function(req, res) {
     res.render('signup', { title: 'New User signup' });
 });
 
+/* GET New Item page.
+router.get('/newitem', function(req, res) {
+    res.render('newitem', { title: 'Add New Item' });
+});
 
+ */
+ 
 /* POST to Add User Service */
 router.post('/adduser', function(req, res) {
 
