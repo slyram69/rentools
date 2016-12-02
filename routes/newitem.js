@@ -1,4 +1,4 @@
-var express = require('express');
+revar express = require('express');
 var router = express.Router();
 var Item = require('../models/item');
 
