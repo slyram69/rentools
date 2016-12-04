@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+
+  <% include partials/navbartwo %>
+
+<center>
+  <p>
+   is this the edit form page?
+  </p>
+</center>
+<div class="">
+  <a href="/newitem">Back to dashboard</a>
+</div>
+
+<div class="container editobject">
+  <p><%=items.name %></p>
+  <img src="<%=items.image %>" alt="">
+  <p><%=items.description %></p>
+  <p><%=items.category %></p>
+  <p><%=items.condition %></p>
+</div>
+
+<!-- testing formating of specific item -->
+
+
+
+
+
+<!-- form to edit item populated with existing data-->
+<div class = "container editform">
+  <div class = "row">
+    <div class="form-group">
+      <label>Update item</label>
+      <form class="" action="/newitem/<%=items.id%>" method="post" enctype="multipart/form-data">
+        <input class = "form-control" type="text" name="name" placeholder="<%=items.name %>">
+        <input class = "form-control" type="text" name="description" placeholder="<%=items.description %>">
+        <label>Category:</label>
+        <select class="form-control" type= "text" name="category">
+          <option>Power Tools</option>
+          <option>Pneumatic Tools</option>
+          <option>Machine Tools</option>
+        </select>
+        <!-- <input class = "form-control" type="text" name="category" placeholder="category"> -->
+        <label>Condition:</label>
+        <select class="form-control" type= "text" name="condition">
+          <option>Excellent</option>
+          <option>Good</option>
+          <option>Fair</option>
+          <<option>Poor</option>
+        </select>
+        <input class = "form-control" type="file" name="image" value="test">
+        <form action="google.com">
+          <input type="submit">
+        </form>
+        <!-- <button class = "form-control btn-danger" type="submit">Submit</button> -->
+      </form>
+    </div>
+</div>
+</div>
+<!-- end of form section -->
+
+
+<% include partials/footer %>
+
+  </body>
+</html>

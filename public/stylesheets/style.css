@@ -117,3 +117,26 @@ margin-top: 8px;
   color: red;
   text-align: center;*/
 }
+
+.addform {
+  max-width: 40%;
+  margin-top: 5em;
+}
+.editform {
+  max-width: 50%;
+  margin-bottom: 5em;
+}
+.editobject {
+  display: block;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+
+/*
+.editformtwo {
+margin-top: 10em;
+}*/
+/*.spacingdiv {
+  margin-bottom: 10em;
+}*/

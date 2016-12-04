@@ -6,16 +6,32 @@
   </head>
   <body>
 
-    <div class = "container">
+    <% include partials/navbartwo %>
+
+    <!-- <div class="spacingdiv">
+    </div> -->
+
+    <div class = "container addform">
       <div class = "row">
-        <div class="">
-          <p><%=title%></p>
+        <div class="form-group">
+          <label>Add Item</label>
           <form class="" action="/newitem/additem" method="post" enctype="multipart/form-data">
             <input class = "form-control" type="text" name="name" placeholder="item name">
             <input class = "form-control" type="text" name="description" placeholder="description">
-            <!-- <input class = "form-control" type="text" name="category" placeholder="description">
-            <input class = "form-control" type="text" name="condition" placeholder="description">
-            <input class = "form-control" type="text" name="description" placeholder="description"> -->
+            <label>Category:</label>
+            <select class="form-control" type= "text" name="category">
+              <option>Power Tools</option>
+              <option>Pneumatic Tools</option>
+              <option>Machine Tools</option>
+            </select>
+            <!-- <input class = "form-control" type="text" name="category" placeholder="category"> -->
+            <label>Condition:</label>
+            <select class="form-control" type= "text" name="condition">
+              <option>Excellent</option>
+              <option>Good</option>
+              <option>Fair</option>
+              <<option>Poor</option>
+            </select>
             <input class = "form-control" type="file" name="image" value="test">
             <button class = "form-control btn-danger" type="submit">Submit</button>
           </form>

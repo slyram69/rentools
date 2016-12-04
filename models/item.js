@@ -9,8 +9,9 @@ var itemSchema = new Schema({
   description: { type: String, required: true },
   image: { type: String },
   category: {type: String},
-  quality: {type: String},
-  address: {type: String}
+  condition: {type: String},
+  date:{type: Date, default:Date.now }
+  // address: {type: String}
   // charge: { length: {hourly, daily}, rate: {}
 });
 
