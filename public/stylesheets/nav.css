@@ -9,7 +9,7 @@
 }*/
 
 .navbar-header{
- /*background-color: #CFB055  !important;*/
+ background-color: navy  !important;
  /*gold*/
 }
 
@@ -20,8 +20,7 @@
 
 .dropdown-toggle{
     color: navy;
- /*background-color: #CFB055  !important;*/
- /*gold*/
+
 }
 
 .dropdown-toggle:hover{

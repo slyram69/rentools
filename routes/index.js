@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 var User = require('../models/user');
+var Item = require('../models/item');
 var env = {
   AUTH0_CLIENT_ID: process.env.AUTH0_CLIENT_ID,
   AUTH0_DOMAIN: process.env.AUTH0_DOMAIN,
@@ -17,23 +18,26 @@ router.get('/', function(req, res, next) {
 });
 /* GET powertools page. */
 router.get('/power', function(req, res, next) {
-  // Item.find({'category': 'power'},function(err, products){
-  //      console.log(products);
-  res.render('power', { title: 'Power Tools' });
+  Item.find({'category': 'power'},function(err, products){
+       console.log(products);
+  res.render('power', { title: 'Power Tools', products:products });
+});
 });
 
 /* GET penumatictools page. */
 router.get('/pneumatic', function(req, res, next) {
-  // Item.find({'category': 'penumatic'},function(err, products){
-  //      console.log(products);
-  res.render('pneumatic', { title: 'Pneumatic Tools' });
+  Item.find({'category': 'penumatic'},function(err, products){
+       console.log(products);
+  res.render('pneumatic', { title: 'Pneumatic Tools', products:products });
+});
 });
 
 /* GET machinetools page. */
 router.get('/machine', function(req, res, next) {
-  // Item.find({'category': 'machine'},function(err, products){
-  //      console.log(products);
-  res.render('machine', { title: 'Machine Tools' });
+  Item.find({'category': 'machine'},function(err, products){
+       console.log(products);
+  res.render('machine', { title: 'Machine Tools', products:products });
+});
 });
 
 /* GET New User page. */
@@ -47,7 +51,7 @@ router.get('/newitem', function(req, res) {
 });
 
  */
- 
+
 /* POST to Add User Service */
 router.post('/adduser', function(req, res) {
 
