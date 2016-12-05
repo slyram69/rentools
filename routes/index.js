@@ -8,6 +8,7 @@ var env = {
   AUTH0_DOMAIN: process.env.AUTH0_DOMAIN,
   AUTH0_CALLBACK_URL: process.env.AUTH0_CALLBACK_URL || 'http://localhost:3000/'
 };
+var Item = require('../models/item');//josh
 
 
 /* GET home page. */
@@ -16,29 +17,37 @@ var env = {
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Tools' });
 });
-/* GET powertools page. */
-router.get('/power', function(req, res, next) {
-  Item.find({'category': 'power'},function(err, products){
-       console.log(products);
-  res.render('power', { title: 'Power Tools', products:products });
-});
+
+// /* GET powertools page. */
+router.get('/power', function(req, res, next){
+  Item.find({'category': 'Power Tools'}, null, {sort: {date: -1}}, function(err, items){
+     if (err) throw err;
+    res.render('power', {title:"Power Tools", items: items});
+  });
 });
 
-/* GET penumatictools page. */
-router.get('/pneumatic', function(req, res, next) {
-  Item.find({'category': 'penumatic'},function(err, products){
-       console.log(products);
-  res.render('pneumatic', { title: 'Pneumatic Tools', products:products });
-});
+// /* GET penumatictools page. */
+router.get('/pneumatic', function(req, res, next){
+  Item.find({'category': 'Pneumatic Tools'}, null, {sort: {date: -1}}, function(err, items){
+     if (err) throw err;
+    res.render('pneumatic', {title:"Power Tools", items: items});
+  });
 });
 
-/* GET machinetools page. */
-router.get('/machine', function(req, res, next) {
-  Item.find({'category': 'machine'},function(err, products){
-       console.log(products);
-  res.render('machine', { title: 'Machine Tools', products:products });
+router.get('/machine', function(req, res, next){
+  Item.find({'category': 'Machine Tools'}, null, {sort: {date: -1}}, function(err, items){
+     if (err) throw err;
+    res.render('machine', {title:"Machine Tools", items: items});
+  });
 });
+
+router.get('/newrentals', function(req, res, next){
+  Item.find({}, null, {sort: {date: -1}}, function(err, items){
+     if (err) throw err;
+    res.render('newrentals', {title:"New Stuff", items: items});
+  });
 });
+
 
 /* GET New User page. */
 router.get('/signup', function(req, res) {
@@ -93,5 +102,5 @@ router.post('/adduser', function(req, res) {
       res.redirect(req.session.returnTo || '/user');
     });
 
+
 module.exports = router;
-/* GET Helo World pagel. */

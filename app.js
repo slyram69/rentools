@@ -39,6 +39,7 @@ app.use(passport.session());
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var newitem = require('./routes/newitem');
+var search = require('./routes/search');
 
 
 
@@ -59,6 +60,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/newitem', newitem);
+app.use('/search', search);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

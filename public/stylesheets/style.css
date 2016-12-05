@@ -10,7 +10,7 @@ box-sizing: border: box;
    display: table;
    width: 100%;
    height: 700px;
-   background-image: url(http://previews.123rf.com/images/nk2549/nk25491302/nk2549130200083/18092817-Carpentry-construction-hardware-tools-collage-with-wood-plank-texture-background-Vector-template-des-Stock-Vector.jpg);
+   background-image: url(https://tctechcrunch2011.files.wordpress.com/2013/08/tools.jpg);
    background-size: cover;
    background-position: center center;
    /*background-image:url(http://previews.123rf.com/images/nk2549/nk25491302/nk2549130200083/18092817-Carpentry-construction-hardware-tools-collage-with-wood-plank-texture-background-Vector-template-des-Stock-Vector.jpg);
@@ -95,4 +95,137 @@ margin-top: 8px;
 
 .dropdown-menu {
     min-width: 200px;
+}
+
+.thumnbail-image {
+  height: 400px;
+  width: 200px;
+  border-color: blue;
+}
+
+/*.thumbnail {
+  height: 400px;
+  width: 200px;
+}*/
+/*
+.container .row img  {
+  height: 300px !important;
+  width: 200px !important;
+  border-radius: 50% !important;
+}
+
+.test {
+  color: red;
+}
+.test2 {
+  color: red;
+  text-align: center;*/
+}
+
+.jumbotron {
+  background-color: #ffffff !important;
+}
+
+
+
+.addform {
+  max-width: 40%;
+  margin-top: 5em;
+}
+.editform {
+  max-width: 50%;
+  margin-bottom: 5em;
+}
+
+.btn-danger {
+  color: #18bc9c;
+  background-color: #18bc9c !important;
+  /*border: 1px solid blue !important;*/
+  border-color: #18bc9c !important;
+}
+.btn-danger:hover {
+  background-color: #1baa8e !important;
+  border-color: #1baa8e !important;
+}
+
+.editobject {
+  display: block;
+  max-width: 50%;
+  margin-bottom: 5em;
+  border: 1px solid #dfdfdf;
+}
+.editobject .box1 {
+  border:1px solid black;
+}
+.editobject .box1 p {
+  border:1px solid black;
+  position: relative;
+}
+.editobject .box2 {
+  border:1px solid black;
+}
+
+
+
+.footertwo {
+  background-color: #18bc9c;
+  padding-bottom: 0em;
+  margin-top: 9em;
+}
+.footertwo ul {
+  list-style-type: none;
+}
+.footertwo ul li a{
+  color: black;
+}
+.footertwo ul li a:hover{
+  color: white;
+  text-decoration: none;
+}
+
+
+#box1 {
+  border: 1px solid black;
+}
+
+}
+#detailsbox {
+  border: 1px solid black;
+}
+#managebox {
+  border: 1px solid black;
+}
+
+#imagebox {
+  border: 1px solid #95a5a6;
+}
+
+#item-info-box {
+  border: .2em solid #95a5a6;
+  max-width: 70%;
+  margin: auto;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.inline-button1 {
+  float: left;
+  margin-top: 3em;
+  position: relative;
+}
+.inline-button2 {
+float: right;
+margin-top: 3em;
+position: relative;
+}
+
+.mini-thumbnail {
+  height: 100px;
+  width: 100px;
+}
+
+.editobject {
+  display: block;
+  margin-top: 5em;
+  margin-bottom: 5em;
 }
