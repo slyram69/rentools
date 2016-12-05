@@ -6,29 +6,57 @@
   </head>
   <body>
 
-  <% include partials/navbartwo %>
+  <% include partials/navbar %>
 
-<center>
-  <p>
-   is this the edit form page?
-  </p>
+
+
+
+<a href="/newitem" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left"></span>Back to Dashboard</a>
+
+<div class="container editobject jumbotron">
+  <div class="thumbnail">
+    <img src="<%=items.image %>" alt="">
+  </div>
+  <div>
+    <h2><strong><%=items.name %></strong></h2>
+  </div>
+  <div>
+    <h4>Description: <%=items.description %></h4>
+  </div>
+  <div>
+    <h5>Condition: <%=items.condition %></h5>
+  </div>
+  <div>
+    <h5>Category: <%=items.category %></h5>
+  </div>
+<div>
+
+
+</div>
+</div>
+
+<!-- attempt at doing a map -->
+<!-- <center>
+  <h3>Location</h3>
+  <h2>this is where map would go</h2>
 </center>
-<div class="">
-  <a href="/newitem">Back to dashboard</a>
-</div>
-
-<div class="container editobject">
-  <p><%=items.name %></p>
-  <img src="<%=items.image %>" alt="">
-  <p><%=items.description %></p>
-  <p><%=items.category %></p>
-  <p><%=items.condition %></p>
-</div>
-
-<!-- testing formating of specific item -->
-
-
-
+<div id="map">
+  <script>
+    function initMap() {
+    var mission = {lat: 26.215, lng: -98.325};
+    var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 10,
+    center: mission
+    });
+    var marker = new google.maps.Marker({
+    position: mission,
+    map: map
+    });
+    }
+  </script>
+  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBagv-43cAtG0CGsWpT7oBQbcSZbbfDxjA&amp;callback=initMap"></script>
+</div> -->
+<!-- end attempt at map -->
 
 
 <!-- form to edit item populated with existing data-->
@@ -53,11 +81,16 @@
           <option>Fair</option>
           <<option>Poor</option>
         </select>
-        <input class = "form-control" type="file" name="image" value="test">
-        <form action="google.com">
-          <input type="submit">
-        </form>
+
+        <input class = "form-control" type="file" name="image">
+        <button class = "form-control btn-danger" type="submit">Update Item</button>
+        <!-- <form action="google.com" class="btn-danger">
+          <input type="submit" class="form-control btn-danger">
+        </form> -->
+
+
         <!-- <button class = "form-control btn-danger" type="submit">Submit</button> -->
+
       </form>
     </div>
 </div>
